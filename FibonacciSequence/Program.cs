@@ -6,12 +6,19 @@ namespace FibonacciSequence
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input a number ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(String.Format("Fibonacci sequence to {0}", num));
-            for (int i = 0; i < num; i++)
+            try
             {
-                Console.WriteLine(Fibonacci(i));
+                Console.WriteLine("Up to which number should this Fibonacci sequence go to?");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(String.Format("Fibonacci sequence to {0} digits", num));
+                for (int i = 0; i < num; i++)
+                {
+                    Console.WriteLine(Fibonacci(i));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
 
