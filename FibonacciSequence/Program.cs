@@ -8,7 +8,7 @@ namespace FibonacciSequence
         {
             try
             {
-                Console.WriteLine("Up to which number should this Fibonacci sequence go to?");
+                Console.WriteLine("How many Fibonacci digits do you wish to see?");
                 int num = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(String.Format("Fibonacci sequence to {0} digits", num));
                 for (int i = 0; i < num; i++)
